@@ -1,0 +1,25 @@
+@startuml
+actor Administrateur
+actor Utilisateur
+
+usecase "Ajouter une catégorie de service" as UC1
+usecase "Modifier une catégorie de service" as UC2
+usecase "Supprimer une catégorie de service" as UC3
+usecase "Ajouter une carte de service" as UC4
+usecase "Modifier une carte de service" as UC5
+usecase "Supprimer une carte de service" as UC6
+usecase "S'inscrire à un service" as UC7
+
+Administrateur --> UC1
+Administrateur --> UC2
+Administrateur --> UC3
+Administrateur --> UC4
+Administrateur --> UC5
+Administrateur --> UC6
+Utilisateur --> UC7
+
+UC1 .> UC4 : inclut
+UC2 .> UC5 : inclut
+UC3 .> UC6 : inclut
+
+@enduml
